@@ -6,7 +6,7 @@ plugins {
     application
 }
 
-group = "me.trapincho"
+group = "cz.trapincho"
 version = "1.4.0"
 
 repositories {
@@ -41,7 +41,7 @@ tasks.withType<KotlinCompile> {
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "me.trapincho.wynntheorybot.MainKt"
+        attributes["Main-Class"] = "cz.trapincho.wynntheorybot.MainKt"
     }
     from(sourceSets.main.get().output)
 
