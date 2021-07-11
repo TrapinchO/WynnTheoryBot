@@ -4,7 +4,9 @@ import com.jagrosh.jdautilities.command.CommandClientBuilder
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter
 import ch.qos.logback.classic.Level
 import cz.trapincho.wynntheorybot.commands.*
+import cz.trapincho.wynntheorybot.commands.technical.ShutdownCommand
 import cz.trapincho.wynntheorybot.events.Events
+import cz.trapincho.wynntheorybot.util.config
 import cz.trapincho.wynntheorybot.util.logger
 import cz.trapincho.wynntheorybot.util.setLoggingLevel
 import net.dv8tion.jda.api.JDABuilder
@@ -14,13 +16,12 @@ import net.dv8tion.jda.api.utils.cache.CacheFlag
 import java.io.File
 
 fun main(args: Array<String>) {
-    val tokenPath = if (args.isNotEmpty()) args[0] else "../discord_token.txt" // default is for testing
-    val token = File(tokenPath).readText()
+    val token = File(config.tokenPath).readText()
 
     val waiter = EventWaiter()
     val client = CommandClientBuilder()
-        .setOwnerId("552883527147061249")  // TrapinchO rn
-        .setPrefix("!")
+        .setOwnerId(config.authorId)
+        .setPrefix(config.prefix)
         .setActivity(Activity.playing("on developer\'s nerves"))
         .useHelpBuilder(false)
 
@@ -43,11 +44,13 @@ fun main(args: Array<String>) {
         .addEventListeners(waiter, client.build())
 
     try {
-        setLoggingLevel(Level.INFO)
+        setLoggingLevel(Level.toLevel(config.loggingLevel))
         logger.info { "Bot successfully started" }
 
         builder.build()  // run the bot
     } catch (error: Exception) {
         logger.error(error) { "$error" }
+    } finally {
+        // TODO: Logging file stuff
     }
 }

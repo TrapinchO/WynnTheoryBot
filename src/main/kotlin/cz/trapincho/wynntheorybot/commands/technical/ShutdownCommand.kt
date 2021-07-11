@@ -1,4 +1,4 @@
-package cz.trapincho.wynntheorybot.commands
+package cz.trapincho.wynntheorybot.commands.technical
 
 import com.jagrosh.jdautilities.command.Command
 import com.jagrosh.jdautilities.command.CommandEvent
