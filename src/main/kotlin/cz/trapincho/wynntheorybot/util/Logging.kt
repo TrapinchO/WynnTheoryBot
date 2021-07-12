@@ -7,6 +7,10 @@ import org.slf4j.LoggerFactory
 
 val logger = KotlinLogging.logger {}
 
+/**
+ * Note: doesn't set the level in config
+ * TODO: Solve
+ */
 fun setLoggingLevel(level: Level) {
     val context = LoggerFactory.getILoggerFactory() as LoggerContext
     context.loggerList.forEach {

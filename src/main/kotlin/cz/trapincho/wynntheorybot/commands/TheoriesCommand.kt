@@ -9,6 +9,7 @@ class TheoriesCommand : Command() {
     init {
         this.name = "theories"
         this.help = "Sends links for community theories"
+        this.arguments = "[theory name]"
     }
 
     override fun execute(event: CommandEvent) {

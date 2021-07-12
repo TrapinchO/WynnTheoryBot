@@ -4,7 +4,7 @@ import com.jagrosh.jdautilities.command.CommandClientBuilder
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter
 import ch.qos.logback.classic.Level
 import cz.trapincho.wynntheorybot.commands.*
-import cz.trapincho.wynntheorybot.commands.technical.ShutdownCommand
+import cz.trapincho.wynntheorybot.commands.technical.*
 import cz.trapincho.wynntheorybot.events.Events
 import cz.trapincho.wynntheorybot.util.config
 import cz.trapincho.wynntheorybot.util.logger
@@ -27,9 +27,12 @@ fun main(args: Array<String>) {
 
         .addCommands(
             ShutdownCommand(),
+            LogCommand(),
+
             HelpCommand(),
             InfoCommand(),
             PingCommand(),
+
             WorldmapCommand(),
             OldloreCommand(),
             ReworksCommand(),

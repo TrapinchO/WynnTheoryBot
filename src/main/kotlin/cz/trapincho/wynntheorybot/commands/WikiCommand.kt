@@ -8,6 +8,7 @@ class WikiCommand : Command() {
     init {
         this.name = "wiki"
         this.help = "Send a link to requested Wynncraft wiki page (WARNING: case sensitive!)"
+        this.arguments = "[page]"
     }
     override fun execute(event: CommandEvent) {
         // sanitation of the page string for later usage in url
