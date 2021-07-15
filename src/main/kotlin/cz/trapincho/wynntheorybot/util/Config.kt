@@ -18,6 +18,8 @@ class Config(
         set(value) { field = value; saveConfig() }  // TODO: Make these not-default for my sanity
     var loggingLevel: String = "INFO"
         set(value) { field = value; saveConfig() }
+    var statusText: String = "on developer\'s nerves"
+        set(value) { field = value; saveConfig() }
 
     private fun saveConfig(path: String = defaultConfigPath) {
         File(path).writeText(Json.encodeToString(this))

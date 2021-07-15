@@ -17,12 +17,11 @@ import java.io.File
 
 fun main(args: Array<String>) {
     val token = File(config.tokenPath).readText()
-
     val waiter = EventWaiter()
     val client = CommandClientBuilder()
         .setOwnerId(config.authorId)
         .setPrefix(config.prefix)
-        .setActivity(Activity.playing("on developer\'s nerves"))
+        .setActivity(Activity.competing(config.statusText))
         .useHelpBuilder(false)
 
         .addCommands(
