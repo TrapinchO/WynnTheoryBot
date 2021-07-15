@@ -36,5 +36,5 @@ private fun loadConfigFile(path: String = defaultConfigPath): Config {
     exitProcess(-1)
 }
 
-private const val defaultConfigPath = "../config.json"
+private const val defaultConfigPath = "./config.json"
 val config = loadConfigFile()

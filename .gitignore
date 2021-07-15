@@ -3,5 +3,6 @@
 .gradle/
 
 bot.log
+config.json
 
 build/
