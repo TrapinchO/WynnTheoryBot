@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
     val client = CommandClientBuilder()
         .setOwnerId(config.authorId)
         .setPrefix(config.prefix)
-        .setActivity(Activity.competing(config.statusText))
+        .setActivity(Activity.watching(config.statusText))
         .useHelpBuilder(false)
 
         .addCommands(
