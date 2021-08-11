@@ -12,7 +12,7 @@ class HelpCommand : Command() {
     override fun execute(event: CommandEvent) {
         // gets the command name from the name of its class
         // println(Regex("^.*\\.(.*)Command$").find(this.javaClass.name)?.groupValues?.get(1)?.lowercase())
-        event.channel.sendMessage(
+        event.channel.sendMessageEmbeds(
             EmbedBuilder()
             .setTitle("Help")
                 .addField("**help**", "Displays list of available commands", false)

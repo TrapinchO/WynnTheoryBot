@@ -10,7 +10,7 @@ class InfoCommand : Command() {
         this.help = "Sends information about the bot"
     }
     override fun execute(event: CommandEvent) {
-        event.channel.sendMessage(
+        event.channel.sendMessageEmbeds(
             EmbedBuilder()
             .setTitle("Information about the bot")
             .setDescription("Bot for the WynnTheory discord server\nMade by TrapinchO")
