@@ -7,19 +7,17 @@ plugins {
 }
 
 group = "cz.trapincho"
-version = "1.6.0"
+version = "2.0.0"
 
 repositories {
     mavenCentral()
-    maven("https://m2.dv8tion.net/releases")
     maven("https://maven.scijava.org/content/groups/public/")
 }
 
 dependencies {
     testImplementation(kotlin("test"))
 
-    implementation("net.dv8tion:JDA:4.3.0_299")
-    implementation("com.jagrosh:jda-utilities:3.0.5")
+    implementation("dev.kord:kord-core:0.8.0-M5")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
 
