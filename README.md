@@ -1,5 +1,10 @@
 # WynnTheory official discord bot
 
+# WARNING
+When you build a jar you need to remove certain files from it ortherwise you will be unable to run the jar!
+
+See: [SO answer](https://stackoverflow.com/a/66881564)
+
 ## Running the bot
 1) create file "config.json" in the same file as the bot jar is in
 2) create and populate these fields:

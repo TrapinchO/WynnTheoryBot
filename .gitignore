@@ -6,3 +6,4 @@ bot.log
 config.json
 
 build/
+src/main/resources/META-INF/MANIFEST.MF

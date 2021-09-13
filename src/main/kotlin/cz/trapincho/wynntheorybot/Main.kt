@@ -9,6 +9,7 @@ import dev.kord.core.Kord
 import java.io.File
 
 
+// TODO: Fix https://stackoverflow.com/a/66881564
 suspend fun main() {
     val token = File(config.tokenPath).readText()
     val client = Kord(token)
