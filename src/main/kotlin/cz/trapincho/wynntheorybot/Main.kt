@@ -27,10 +27,14 @@ suspend fun main() {
     val token = File(config.tokenPath).readText()
     val client = Kord(token)
 
+    client.on<ReadyEvent> {
+        kord.editPresence { watching(config.statusText) }
+    }
+
     client.on<MemberJoinEvent> {
         val role = member.guild.roles.toList().find { role -> role.name == "Guest" }
             ?: return@on logger.error { "Role \"Guest\" not found" }
-        
+
         member.addRole(role.id)
     }
 
@@ -54,6 +58,7 @@ suspend fun main() {
                 field("**ping**") { "Displays bot\'s ping" }
                 field("**worldmap**") { "Sends link to Wynncraft official online map" }
                 field("**oldlore**") { "Sends links to old Wynncraft lore" }
+                field("**reworks**") { "Sends links community lore reworks" }
                 field("**theories**") { "Sends either list of theories or link to requested theory" }
                 field("**wiki**") { "Sends link to requested page on Wynncraft wiki" +
                         "*(WARNING: case sensitive!)*" +
@@ -72,6 +77,17 @@ suspend fun main() {
                         linkButton("https://forums.wynncraft.com/threads/nether-beast.186210/") { label = "Nether Beast" }
                         linkButton("https://wynncraft.fandom.com/wiki/Storyline?redirect=no") { label = "Storyline" }
                     }
+                }
+            }
+
+            "reworks" -> message.channel.createMessage {
+                content = "Links for the community lore reworks"
+                actionRow {
+                    val base = "https://forums.wynncraft.com/threads/"
+                    linkButton(base + "complete-rework-of-bobs-lore.287431/") { label = "Bob" }
+                    linkButton(base + "jungle-lore-rework.290103/") { label = "Jungle" }
+                    linkButton(base + "the-ocean-lore-rework.292151/") { label = "Ocean" }
+                    linkButton(base + "gavel-lore-rework.295429/") { label = "Gavel" }
                 }
             }
 
