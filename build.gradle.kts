@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "cz.trapincho"
-version = "2.0.0"
+version = "2.0.1"
 
 repositories {
     mavenCentral()
@@ -26,7 +26,7 @@ dependencies {
     implementation("ch.qos.logback:logback-core:1.3.0-alpha5")
     implementation("ch.qos.logback:logback-classic:1.3.0-alpha5")
 
-    implementation("io.github.microutils:kotlin-logging:2.0.10")
+    implementation("io.github.microutils:kotlin-logging:2.0.11")
 }
 
 tasks.test {
