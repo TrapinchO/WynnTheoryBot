@@ -16,6 +16,7 @@ class ReworksCommand : Command() {
                 Button.link("https://forums.wynncraft.com/threads/complete-rework-of-bobs-lore.287431/", "Bob"),
                 Button.link("https://forums.wynncraft.com/threads/jungle-lore-rework.290103/", "Jungle"),
                 Button.link("https://forums.wynncraft.com/threads/the-ocean-lore-rework.292151/", "Ocean"),
+                Button.link("https://forums.wynncraft.com/threads/gavel-lore-rework.295429/", "Gavel"),
             )
             .queue()
     }

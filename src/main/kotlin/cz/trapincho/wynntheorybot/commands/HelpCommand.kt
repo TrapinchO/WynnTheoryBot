@@ -20,6 +20,7 @@ class HelpCommand : Command() {
                 .addField("**ping**", "Displays bot\'s ping", false)
                 .addField("**worldmap**", "Sends link to Wynncraft official online map", false)
                 .addField("**oldlore**", "Sends links to old Wynncraft lore", false)
+                .addField("**reworks**", "Sends links to old community lore reworks", false)
                 .addField(
                    "**wiki [page]**",
                    "Sends link to requested page on Wynncraft wiki" +

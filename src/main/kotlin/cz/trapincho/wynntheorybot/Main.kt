@@ -1,25 +1,5 @@
 package cz.trapincho.wynntheorybot
 
-<<<<<<< HEAD
-import ch.qos.logback.classic.Level
-import cz.trapincho.wynntheorybot.events.*
-import cz.trapincho.wynntheorybot.util.config
-import cz.trapincho.wynntheorybot.util.logger
-import cz.trapincho.wynntheorybot.util.setLoggingLevel
-import dev.kord.core.Kord
-import java.io.File
-
-
-// TODO: Fix https://stackoverflow.com/a/66881564
-suspend fun main() {
-    val token = File(config.tokenPath).readText()
-    val client = Kord(token)
-
-    // import events
-    onReady(client)
-    onMemberJoin(client)
-    onMessageCreate(client)
-=======
 import com.jagrosh.jdautilities.command.CommandClientBuilder
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter
 import ch.qos.logback.classic.Level
@@ -35,7 +15,8 @@ import net.dv8tion.jda.api.requests.GatewayIntent
 import net.dv8tion.jda.api.utils.cache.CacheFlag
 import java.io.File
 
-fun main(args: Array<String>) {
+
+fun main() {
     val token = File(config.tokenPath).readText()
     val waiter = EventWaiter()
     val client = CommandClientBuilder()
@@ -64,7 +45,6 @@ fun main(args: Array<String>) {
 
         .addEventListeners(Events())
         .addEventListeners(waiter, client.build())
->>>>>>> parent of a25b2ef (Changed framwork from JDA to Kord (NOT YET ONLINE))
 
     try {
         setLoggingLevel(Level.toLevel(config.loggingLevel))

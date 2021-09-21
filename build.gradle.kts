@@ -7,11 +7,7 @@ plugins {
 }
 
 group = "cz.trapincho"
-<<<<<<< HEAD
-version = "2.0.1"
-=======
-version = "1.6.0"
->>>>>>> parent of a25b2ef (Changed framwork from JDA to Kord (NOT YET ONLINE))
+version = "1.6.1"
 
 repositories {
     mavenCentral()
