@@ -7,17 +7,23 @@ plugins {
 }
 
 group = "cz.trapincho"
+<<<<<<< HEAD
 version = "2.0.1"
+=======
+version = "1.6.0"
+>>>>>>> parent of a25b2ef (Changed framwork from JDA to Kord (NOT YET ONLINE))
 
 repositories {
     mavenCentral()
+    maven("https://m2.dv8tion.net/releases")
     maven("https://maven.scijava.org/content/groups/public/")
 }
 
 dependencies {
     testImplementation(kotlin("test"))
 
-    implementation("dev.kord:kord-core:0.8.0-M5")
+    implementation("net.dv8tion:JDA:4.3.0_299")
+    implementation("com.jagrosh:jda-utilities:3.0.5")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
 
