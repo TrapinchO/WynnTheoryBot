@@ -1,5 +1,5 @@
 # WynnTheory official discord bot
-
+Jar files can be found in the latest action in https://github.com/TrapinchO/WynnTheoryBot/actions
 
 ## Running the bot
 1) create file "config.json" in the same file as the bot jar is in

@@ -45,8 +45,7 @@ fun main() {
             .awaitReady()
 
         commands.forEach {
-            jda.upsertCommand(it)
-                .queue()
+            jda.upsertCommand(it).queue()
         }
     } catch (error: Exception) {
         logger.error(error) { "$error" }
