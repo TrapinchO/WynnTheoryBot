@@ -11,13 +11,9 @@ class WikiCommand : Command() {
         this.arguments = "[page]"
     }
     override fun execute(event: CommandEvent) {
-        // sanitation of the page string for later usage in url
-        var page = URLEncoder.encode(event.args, "UTF-8").replace("+", "%20")
+        val page = shortcuts[event.args.lowercase()]
+            ?: URLEncoder.encode(event.args, "UTF-8").replace("+", "%20")
 
-        if (page in shortcuts) {
-            page = shortcuts[page]!!  // can't actually raise an error, since there is a check right before it
-        }
-        // sends link to home page if no arguments are present
         event.channel.sendMessage("https://wynncraft.fandom.com/wiki/$page").queue()
     }
 

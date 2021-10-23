@@ -9,6 +9,7 @@ class WorldmapCommand : Command() {
         this.help = "Sends link to Wynncraft official online map"
     }
     override fun execute(event: CommandEvent) {
-        event.channel.sendMessage("https://map.wynncraft.com/").queue()
+        event.channel.sendMessage("https://map.wynncraft.com/")
+            .queue()
     }
 }

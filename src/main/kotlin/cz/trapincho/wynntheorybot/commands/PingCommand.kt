@@ -9,7 +9,6 @@ class PingCommand : Command() {
         this.help = "Sends bot\'s latency"
     }
     override fun execute(event: CommandEvent) {
-        println(event.args)
         event.channel.sendMessage("Bot\'s latency is ${event.jda.gatewayPing}ms")
             .queue()
     }

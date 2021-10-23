@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "cz.trapincho"
-version = "1.6.1"
+version = "1.7.0"
 
 repositories {
     mavenCentral()
@@ -16,12 +16,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.5.31")
 
-    implementation("net.dv8tion:JDA:4.3.0_299")
+    implementation("net.dv8tion:JDA:4.3.0_336")
     implementation("com.jagrosh:jda-utilities:3.0.5")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
 
 
     implementation("org.slf4j:slf4j-api:2.0.0-alpha1")
@@ -47,6 +47,8 @@ tasks.jar {
 
     dependsOn(configurations.runtimeClasspath)
     from({
-        configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) }
+        configurations.runtimeClasspath.get()
+            .filter { it.name.endsWith("jar") }
+            .map { zipTree(it) }
     })
 }

@@ -16,7 +16,6 @@ class OldloreCommand : Command() {
                 Button.link("https://web.archive.org/web/20140410011458/http://forums.wynncraft.com/threads/wynn-tales-the-noble-house-of-twain.8072/", "Twains"),
                 Button.link("https://forums.wynncraft.com/threads/nether-beast.186210/", "Nether Beast"),
                 Button.link("https://wynncraft.fandom.com/wiki/Storyline?redirect=no", "Storyline"),
-            )
-            .queue()
+            ).queue()
     }
 }

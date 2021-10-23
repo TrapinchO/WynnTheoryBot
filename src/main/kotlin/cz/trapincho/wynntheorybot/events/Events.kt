@@ -7,7 +7,8 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter
 class Events : ListenerAdapter() {
     override fun onGuildMemberJoin(event: GuildMemberJoinEvent) {
         // if "Guest" role is not found report an error and return
-        val role = event.guild.roles.find { role -> role.name == "Guest" } ?: return logger.error { "Role \"Guest\" not found" }
+        val role = event.guild.roles.find { role -> role.name == "Guest" }
+            ?: return logger.error { "Role \"Guest\" not found" }
         event.guild.addRoleToMember(event.member, role).queue()
     }
 }
