@@ -11,11 +11,8 @@ import kotlin.system.exitProcess
 
 @Serializable
 class Config(
-    val authorId: String,
     val tokenPath: String,
 ) {
-    var prefix: String = "!"
-        set(value) { field = value; saveConfig() }  // TODO: Make these not-default for my sanity
     var loggingLevel: String = "INFO"
         set(value) { field = value; saveConfig() }
     var statusText: String = "on developer\'s nerves"

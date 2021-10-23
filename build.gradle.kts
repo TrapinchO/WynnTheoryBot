@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "cz.trapincho"
-version = "1.7.0"
+version = "1.7.1"
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test:1.5.31")
 
     implementation("net.dv8tion:JDA:4.3.0_336")
-    implementation("com.jagrosh:jda-utilities:3.0.5")
+    //implementation("com.jagrosh:jda-utilities:3.0.5")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
 
