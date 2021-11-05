@@ -10,12 +10,13 @@ import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.entities.Activity
 import net.dv8tion.jda.api.interactions.commands.OptionType
 import net.dv8tion.jda.api.interactions.commands.build.CommandData
+import net.dv8tion.jda.api.requests.GatewayIntent
 import java.io.File
 
 
 fun main() {
     val token = File(config.tokenPath).readText()
-    val builder = JDABuilder.createLight(token, listOf())
+    val builder = JDABuilder.createLight(token, listOf(GatewayIntent.GUILD_MEMBERS))
         .setActivity(Activity.watching(config.statusText))
         .addEventListeners(
             SlashCommandEvent(),

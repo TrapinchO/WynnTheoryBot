@@ -12,6 +12,7 @@ import kotlin.system.exitProcess
 @Serializable
 class Config(
     val tokenPath: String,
+    val guestRoleName: String,
 ) {
     var loggingLevel: String = "INFO"
         set(value) { field = value; saveConfig() }
