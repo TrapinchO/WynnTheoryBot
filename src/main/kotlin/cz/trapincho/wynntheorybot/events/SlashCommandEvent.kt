@@ -3,13 +3,13 @@ package cz.trapincho.wynntheorybot.events
 
 import cz.trapincho.wynntheorybot.util.logger
 import net.dv8tion.jda.api.EmbedBuilder
-import net.dv8tion.jda.api.events.interaction.SlashCommandEvent
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
-import net.dv8tion.jda.api.interactions.components.Button
+import net.dv8tion.jda.api.interactions.components.buttons.Button
 import java.net.URLEncoder
 
 class SlashCommandEvent : ListenerAdapter() {
-    override fun onSlashCommand(event: SlashCommandEvent) {
+    override fun onSlashCommandInteraction(event: SlashCommandInteractionEvent) {
         when (event.name) {
             "ping" ->
                 event.reply("Bot\'s latency is ${event.jda.gatewayPing}ms")

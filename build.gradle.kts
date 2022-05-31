@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "cz.trapincho"
-version = "1.7.2"
+version = "1.8.0"
 
 repositories {
     mavenCentral()
@@ -16,19 +16,19 @@ repositories {
 }
 
 dependencies {
-    testImplementation("org.jetbrains.kotlin:kotlin-test:1.5.31")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.6.21")
 
-    implementation("net.dv8tion:JDA:4.3.0_336")
+    implementation("net.dv8tion:JDA:5.0.0-alpha.12")
     //implementation("com.jagrosh:jda-utilities:3.0.5")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 
 
-    implementation("org.slf4j:slf4j-api:2.0.0-alpha1")
-    implementation("ch.qos.logback:logback-core:1.3.0-alpha5")
-    implementation("ch.qos.logback:logback-classic:1.3.0-alpha5")
+    //implementation("org.slf4j:slf4j-api:2.0.0-alpha1")
+    //implementation("ch.qos.logback:logback-core:1.2.11")
+    //implementation("ch.qos.logback:logback-classic:1.2.11")
 
-    implementation("io.github.microutils:kotlin-logging:2.0.11")
+    implementation("io.github.microutils:kotlin-logging:2.1.21")
 }
 
 tasks.test {

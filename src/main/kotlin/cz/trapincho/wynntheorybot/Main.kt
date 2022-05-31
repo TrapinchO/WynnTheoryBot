@@ -1,16 +1,14 @@
 package cz.trapincho.wynntheorybot
 
-import ch.qos.logback.classic.Level
 import cz.trapincho.wynntheorybot.events.MemberJoinEvents
 import cz.trapincho.wynntheorybot.events.SlashCommandEvent
 import cz.trapincho.wynntheorybot.util.config
 import cz.trapincho.wynntheorybot.util.logger
-import cz.trapincho.wynntheorybot.util.setLoggingLevel
 import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.entities.Activity
 import net.dv8tion.jda.api.interactions.commands.OptionType
-import net.dv8tion.jda.api.interactions.commands.build.CommandData
 import net.dv8tion.jda.api.requests.GatewayIntent
+import net.dv8tion.jda.internal.interactions.CommandDataImpl
 import java.io.File
 
 
@@ -24,20 +22,20 @@ fun main() {
         )
 
     val commands = listOf(
-        CommandData("ping", "Sends bot's latency"),
-        CommandData("info", "Sends information about the bot"),
-        CommandData("help", "Displays list of available commands"),
+        CommandDataImpl("ping", "Sends bot's latency"),
+        CommandDataImpl("info", "Sends information about the bot"),
+        CommandDataImpl("help", "Displays list of available commands"),
 
-        CommandData("oldlore", "Sends links to old and outdated lore"),
-        CommandData("reworks", "Sends links for community reworks"),
+        CommandDataImpl("oldlore", "Sends links to old and outdated lore"),
+        CommandDataImpl("reworks", "Sends links for community reworks"),
 
-        CommandData("worldmap", "Sends link to Wynncraft official online map"),
-        CommandData("wiki", "Send a link to requested Wynncraft wiki page (WARNING: case sensitive!)")
+        CommandDataImpl("worldmap", "Sends link to Wynncraft official online map"),
+        CommandDataImpl("wiki", "Send a link to requested Wynncraft wiki page (WARNING: case sensitive!)")
             .addOption(OptionType.STRING, "page", "what page to show"),
     )
 
     try {
-        setLoggingLevel(Level.toLevel(config.loggingLevel))
+        //setLoggingLevel(Level.toLevel(config.loggingLevel))
         logger.info { "Bot successfully started" }
 
         // run the bot
