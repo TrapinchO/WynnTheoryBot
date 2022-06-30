@@ -19,14 +19,11 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test:1.6.21")
 
     implementation("net.dv8tion:JDA:5.0.0-alpha.12")
-    //implementation("com.jagrosh:jda-utilities:3.0.5")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 
 
     implementation("org.slf4j:slf4j-simple:1.7.26")
-    //implementation("ch.qos.logback:logback-core:1.2.11")
-    //implementation("ch.qos.logback:logback-classic:1.2.11")
 
     implementation("io.github.microutils:kotlin-logging:2.1.21")
 }
