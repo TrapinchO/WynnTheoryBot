@@ -24,7 +24,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 
 
-    //implementation("org.slf4j:slf4j-api:2.0.0-alpha1")
+    implementation("org.slf4j:slf4j-simple:1.7.26")
     //implementation("ch.qos.logback:logback-core:1.2.11")
     //implementation("ch.qos.logback:logback-classic:1.2.11")
 
