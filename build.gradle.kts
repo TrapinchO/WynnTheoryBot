@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "cz.trapincho"
-version = "1.8.0"
+version = "1.8.2"
 
 repositories {
     mavenCentral()
@@ -16,16 +16,15 @@ repositories {
 }
 
 dependencies {
-    testImplementation("org.jetbrains.kotlin:kotlin-test:1.6.21")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.7.0")
 
     implementation("net.dv8tion:JDA:5.0.0-alpha.12")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 
 
-    implementation("org.slf4j:slf4j-simple:1.7.26")
-
-    implementation("io.github.microutils:kotlin-logging:2.1.21")
+    implementation("org.slf4j:slf4j-simple:1.7.36")
+    implementation("io.github.microutils:kotlin-logging:2.1.23")
 }
 
 tasks.test {
@@ -34,6 +33,12 @@ tasks.test {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+// I have no idea how or why this works
+// courtesy of https://stackoverflow.com/a/70832720
+tasks.withType<Jar> {
+    duplicatesStrategy = DuplicatesStrategy.WARN
 }
 
 tasks.jar {
