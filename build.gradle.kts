@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "cz.trapincho"
-version = "1.8.2"
+version = "1.8.3"
 
 repositories {
     mavenCentral()
@@ -22,8 +22,7 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 
-
-    implementation("org.slf4j:slf4j-simple:1.7.36")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
     implementation("io.github.microutils:kotlin-logging:2.1.23")
 }
 

@@ -52,7 +52,7 @@ class SlashCommandEvent : ListenerAdapter() {
                 event.reply("https://wynncraft.fandom.com/wiki/$page").queue()
             }
 
-            else -> logger.warn { "Unknown slash command interaction: ${event.name}" }
+            else -> logger.error("Unknown slash command interaction: ${event.name}")
         }
     }
 }
