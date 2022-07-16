@@ -74,8 +74,8 @@ private val reworkButtons = listOf(
 private val oldloreButtons = listOf(
     Button.link("https://web.archive.org/web/20140408052809/http://forums.wynncraft.com/threads/wynn-tales-the-legend-of-bob.381", "Bob"),
     Button.link("https://web.archive.org/web/20140410011458/http://forums.wynncraft.com/threads/wynn-tales-the-noble-house-of-twain.8072/", "Twains"),
-    Button.link("https://forums.wynncraft.com/threads/nether-beast.186210/", "Nether Beast"),
-    Button.link("https://wynncraft.fandom.com/wiki/Storyline?redirect=no", "Storyline"),
+    Button.link("https://web.archive.org/web/20220716103023/https://forums.wynncraft.com/threads/nether-beast.186210/", "Nether Beast"),
+    Button.link("https://web.archive.org/web/20220716102942/https://wynncraft.fandom.com/wiki/Storyline?diff=prev&oldid=121433", "Storyline"),
 )
 
 private fun createHelpEmbed() =
