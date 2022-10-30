@@ -39,6 +39,7 @@ class SlashCommandEvent : ListenerAdapter() {
                 event.deferReply()
                     .setContent("Links for the community lore reworks")
                     .addActionRow(reworkButtons)
+                    .addActionRow(reworkButtons2)
                     .queue()
 
             "worldmap" ->
@@ -70,8 +71,9 @@ private val reworkButtons = listOf(
     Button.link("https://forums.wynncraft.com/threads/the-ocean-lore-rework.292151/", "Ocean"),
     Button.link("https://forums.wynncraft.com/threads/gavel-lore-rework.295429/", "Gavel"),
     Button.link("https://forums.wynncraft.com/threads/item-lore-rework.301483/", "Item"),
+)
+private val reworkButtons2 = listOf(
     Button.link("https://forums.wynncraft.com/threads/ancient-wynnic-language-rework.304579/", "Olmic"),
-
 )
 
 private val oldloreButtons = listOf(

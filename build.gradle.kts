@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "cz.trapincho"
-version = "1.8.3"
+version = "1.8.4"
 
 repositories {
     mavenCentral()
