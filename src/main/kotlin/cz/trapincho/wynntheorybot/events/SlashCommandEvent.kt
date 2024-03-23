@@ -50,7 +50,7 @@ class SlashCommandEvent : ListenerAdapter() {
                 val str = if (event.options.isNotEmpty()) event.options[0].asString else ""
                 val page = shortcuts[str.lowercase()]
                     ?: URLEncoder.encode(str, "UTF-8").replace("+", "%20")
-                event.reply("https://wynncraft.fandom.com/wiki/$page").queue()
+                event.reply("https://wynncraft.wiki.gg/wiki/$page").queue()
             }
 
             else -> logger.error("Unknown slash command interaction: ${event.name}")
