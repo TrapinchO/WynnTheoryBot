@@ -19,7 +19,7 @@ fun main() {
         .setActivity(Activity.watching(config.statusText))
         .addEventListeners(
             SlashCommandEvent(),
-            MemberJoinEvents(),
+            // MemberJoinEvents(),  // the system doesnt work well anyways
         )
 
     val commands = listOf(
